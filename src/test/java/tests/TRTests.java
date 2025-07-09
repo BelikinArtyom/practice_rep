@@ -35,9 +35,14 @@ public class TRTests extends TestBase {
 
         cookies.cityWithCookie();
         objectListPage.openObjectListPage();
-        $("[name='wcType']").closest(".field__element").click();
+        objectListPage.allFilters.click();
+        $("[name=wcType]").closest(".field__element").click();
         $(".dropdown-item").closest(".shell-element").click();
-        sleep(4000);
+        $(".chips__item").
+
+
+
+//        sleep(4000);
 
 
     }
