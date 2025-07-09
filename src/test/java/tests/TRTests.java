@@ -26,7 +26,7 @@ public class TRTests extends TestBase {
         objectListPage.allFilters.click();
         objectListPage.storySelector.click();
         objectListPage.storyFrom.setValue("-5");
-        objectListPage.storyTo.shouldHave(value("5"));
+        objectListPage.storyFrom.shouldHave(value("5"));
     }
 
 
@@ -35,7 +35,7 @@ public class TRTests extends TestBase {
 
         cookies.cityWithCookie();
         objectListPage.openObjectListPage();
-        $(".field__element").shouldHave(text("Санузел")).click();
+        $("[name='wcType']").closest(".field__element").click();
         $(".dropdown-item").closest(".shell-element").click();
         sleep(4000);
 
