@@ -7,8 +7,7 @@ import org.openqa.selenium.Cookie;
 import tests.pages.Cookies;
 import tests.pages.ObjectListPage;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.value;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
 
@@ -34,17 +33,13 @@ public class TRTests extends TestBase {
     public void bathroomTagsTest() {
 
         cookies.cityWithCookie();
+
         objectListPage.openObjectListPage();
         objectListPage.allFilters.click();
         $("[name=wcType]").closest(".field__element").click();
         $(".dropdown-item").closest(".shell-element").click();
-        $(".chips__item").
-
-
-
-//        sleep(4000);
-
-
+        $(".shell-element .chips__item_black").shouldBe(visible)
+                .shouldHave(text("Раздельный"));
     }
 }
 
